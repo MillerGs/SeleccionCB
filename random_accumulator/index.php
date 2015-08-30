@@ -11,27 +11,15 @@ and open the template in the editor.
     </head>
     <body>
         <?php
-            if(!isset($suma)){
-                $suma = 0;
-                if($suma <= 10000){
-                    for($i=1; $i<=100; $i++){
-                            $numero = mt_rand(1, 100);
-                        $suma = $suma + $numero;
-                    }
-                    
-                }
-            }else{
-                if($suma <= 10000){
-                    for($i=1; $i<=100; $i++){
-                            $numero = mt_rand(1, 100);
-                        $suma = $suma + $numero;
-                    }
-                    
-                }
-                    
+        $suma = 0;
+            for ($i= 0; $suma<=10000; $i++){
+                $numero = rand(1, 100);
+                //echo $numero.'<br>';
+                $suma = $suma + $numero;
             }
-            echo $suma.'<br>';
-            echo getrand($suma);
+                $dato = $suma - $numero;
+            echo '<b>'.$suma.'</b><br>';
+            echo 'valor acumulado de la suma hasta el valor más cercano que no exceda es: '. $dato;
         ?>
     </body>
 </html>
